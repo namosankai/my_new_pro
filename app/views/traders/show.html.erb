@@ -1,0 +1,19 @@
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="section-title">
+                <h1>業者一覧</h1>
+            </div>
+            <div class="section-list">
+                <a href="/traders/new">業者追加</a>
+            </div>
+            <% @traders.each do |trader| %>
+                <div class="traders-index-item">
+                    <%= link_to(trader.content, "/traders/#{trader.id}") %>
+                </div>
+            <% end %>
+        
+
+        </div>
+    </div>
+</body>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SampleApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+   <header>
+        <div class="header-logo">
+            <%= link_to("Teppen","/") %>
+        </div>
+        <div class="header-list">
+            <ul>
+                <li>
+                    <%= link_to("発注入力","/order/index") %>
+                </li>
+                <li>
+                    <%= link_to("業者一覧","/traders/show") %>
+                </li>
+                <li>
+                    <%= link_to("経費","/order/expense") %>
+                </li>
+                <li>
+                    <%= link_to("売上情報","/order/sales") %>
+                </li>
+            </ul>
+        </div>
+        
+    </header>
+    <% if flash[:notice]%>
+      <div class="flash">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>
