@@ -1,0 +1,23 @@
+<body>
+    <div class="main-excel-order">
+        <div class="container">
+            
+                <div class="section-title">
+                    <h1>経費</h1>
+                
+                        <div class="order-index-item">
+                            <div class="order-list"></div>
+                                <% @expences.each do |expence| %>
+                                <p><%= expence.name %></p>
+                                <p><%= expence.cost %></p>
+                            
+                                
+                            </div>
+                        <% end %>
+                        </div>
+                
+                </div>
+        </div>
+
+    </div>
+</body>

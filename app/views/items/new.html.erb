@@ -1,0 +1,32 @@
+<body>
+    <div class="main trader-new">
+        <div class="container">
+            <div class="section-title">
+                アイテムを追加
+            </div>
+            <%= form_tag("/items/create") do %>
+                <div class="form-heading">
+                    <div class="users-form">
+                        <div class="form-body">
+                            
+
+
+                           
+                            <div class="form">
+                                <p>名前</p>
+                                <input name="name" >
+                                <p>値段</p>
+                                <input name="price">
+                                <p>原価</p>
+                                <input name="cost">
+                                
+                                <input type="submit" value="追加">
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</body>
