@@ -6,8 +6,21 @@
                     <h1>発注入力</h1>
                 
                         <div class="order-index-item">
-                        
-                
+                            <div class="order-list">
+                                <% @traders.each do |trader| %>
+                                <p><%= trader.content %></p>
+                            
+                                <ul>
+                                    <li>
+                                        <p>個数</p>
+                                        <input>
+                                        <p>値段</p>
+                                        <input >
+                                        <input type="submit" value="登録">
+                                    </li>
+                                </ul>
+                            </div>
+                        <% end %>
                         </div>
                 
                 </div>

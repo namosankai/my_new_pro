@@ -5,5 +5,10 @@ class CreateTraders < ActiveRecord::Migration[6.0]
 
       t.timestamps
     end
+
+    create_table :items do |t|
+      t.belongs_to :trader
+      t.timestamps
+    end
   end
 end

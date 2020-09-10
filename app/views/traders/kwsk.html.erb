@@ -13,5 +13,17 @@
             <%= link_to("編集","/traders/#{@trader.id}/edit") %>
             <%= link_to("削除","/traders/#{@trader.id}/destroy", {method:"post"}) %>
         </div>
+        <div class="content-add">
+            <%= link_to("アイテムを追加","/items/:id/new") %>
+            <div class="content-list">
+                <% @items.each do |item| %>
+                    <div class="content-item">
+                        <%= item.name %>
+                        <%= item.price %>
+                        <%= item.cost %>
+                    </div>
+                <% end %>
+            </div>
+        </div>
     </div>
 </div>

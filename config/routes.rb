@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'items/index' => "items#index"
+  get "items/:id/new" => "items#new"
+  post "items/create" => "items#create"
+
+  get 'expences/index' => "expences#index"
+
   get "traders/show" => "traders#show"
   get "traders/new" => "traders#new"
   post "traders/create" => "traders#create"

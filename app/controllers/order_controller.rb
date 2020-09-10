@@ -1,5 +1,6 @@
 class OrderController < ApplicationController
   def index
+    @traders = Trader.all
   end
 
   def expense

@@ -7,6 +7,7 @@ class TradersController < ApplicationController
 
   #業者追加ページ
   def new
+    @trader = Trader.find_by(id: params[:id])
   end
 
   #新規投稿ボタン
@@ -23,6 +24,7 @@ class TradersController < ApplicationController
   #詳細ページ
   def kwsk
     @trader = Trader.find_by(id: params[:id])
+    @items = Item.find_by(trader_id: params[:trader_id])
   end
 
   #編集ページ

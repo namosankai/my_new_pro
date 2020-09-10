@@ -1,0 +1,9 @@
+.order-list {
+    float: left;
+    padding: 20px 10px 0 20px;
+}
+
+.order-list li {
+    float: left;
+    padding-right: 35px;
+}
