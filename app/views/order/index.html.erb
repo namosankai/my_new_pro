@@ -4,24 +4,22 @@
             
                 <div class="section-title">
                     <h1>発注入力</h1>
-                
+                    <!-- <%= form_tag("送信先") do %> -->
                         <div class="order-index-item">
                             <div class="order-list">
                                 <% @traders.each do |trader| %>
-                                <p><%= trader.content %></p>
-                            
+                                <div class="order-list-item">
+                                    <p><%= trader.content %></p>
+                                    <p>仕入れ値</p>
+                                    <input name="price" >
+                                </div>
+                                <% end %>
                                 
-                                <p>個数</p>
-                                <input>
-                                <p>値段</p>
-                                <input >
-                                        
-                                
-                                
+                                <input type="submit" value="登録">
                             </div>
-                            <% end %>
+
                         </div>
-                    <input type="submit" value="登録">
+                    <!-- <% end %> -->
                 </div>
         </div>
 

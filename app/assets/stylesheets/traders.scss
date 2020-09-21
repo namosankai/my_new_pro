@@ -1,6 +1,16 @@
 .traders-index-item {
-    padding: 20px 30px;
-    background-color: white;
-    overflow: hidden;
-    box-shadow: 0 2px 6px #c1ced7;
-  }
+  padding: 20px 30px;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 2px 6px #c1ced7;
+}
+
+.content-item {
+  float: left;
+  border: 2px blueviolet;
+}
+
+.content-item li {
+  float: left;
+  padding-right: 20px;
+}
