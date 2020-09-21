@@ -3,4 +3,7 @@ class Trader < ApplicationRecord
 
     has_many :items
     has_many :sales
+
+    Trader.joins(:items)
+     
 end

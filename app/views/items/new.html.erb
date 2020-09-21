@@ -19,6 +19,10 @@
                                 <input name="price">
                                 <p>原価</p>
                                 <input name="cost">
+                                <% if @trader_id %>
+                                    <p>id</p>
+                                    <input name="trader_id" value="<%= @trader.id %>">
+                                <% end %>
                                 
                                 <input type="submit" value="追加">
                             </div>

@@ -16,13 +16,15 @@
         <div class="content-add">
             <%= link_to("アイテムを追加","/items/:id/new") %>
             <div class="content-list">
-                <% @items.each do |item| %>
+                
                     <div class="content-item">
-                        <%= item.name %>
-                        <%= item.price %>
-                        <%= item.cost %>
+                        <% if @item %>
+                            <%= @item.name %>
+                            <%= @item.price %>
+                            <%= @item.cost %>
+                        <% end %>
                     </div>
-                <% end %>
+                
             </div>
         </div>
     </div>

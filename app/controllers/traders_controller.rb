@@ -24,7 +24,9 @@ class TradersController < ApplicationController
   #詳細ページ
   def kwsk
     @trader = Trader.find_by(id: params[:id])
-    @items = Item.find_by(trader_id: params[:trader_id])
+    @item = Item.find_by(id: params[:id])
+    
+
   end
 
   #編集ページ
