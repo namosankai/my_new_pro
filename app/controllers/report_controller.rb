@@ -3,6 +3,8 @@ class ReportController < ApplicationController
     @report = Report.find_by(id:2)
     @sale = Saling.find_by(today_id:2)
     
+    
+
     difference = @sale.resalt - @sale.target
     if difference > 0
       @difference = "+" + "#{difference}"
@@ -10,13 +12,11 @@ class ReportController < ApplicationController
       @difference = difference
     end
 
-    @total_sales = @sale.cash + @sale.credit + @sale.gift
-
   end
 
   def new
     @report = Report.find_by(id: params[:id])
-    @sale = Saling.find_by(id: params[:id)
+    @sale = Saling.find_by(id: params[:id])
   end
 
   def create

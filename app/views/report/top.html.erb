@@ -23,7 +23,7 @@
                     <li>累計売上:</li>
                     <li class="list-top">累計差額:</li>
 
-                    <li>実績総売上: <%= @total_sales %></li>
+                    <li>実績総売上: <%= @sale.cash + @sale.credit + @sale.gift %></li>
                     <li>実績現計: <%= @sale.cash %>円</li>
                     <li>実績信計: <%= @sale.credit %>円</li>
                     <li>実績商品券: <%= @sale.gift %>円</li>
