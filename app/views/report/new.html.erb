@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="section-title">
+        <h1>レポート</h1>
+    </div>
+    <div class="top-wrapper">
+        <div class="report-content">
+            <h2>営業報告/入力</h2>
+            <div class="report-list">
+                <%= form_tag("/report/create") do %>
+                <div class="user-form">
+                    <div class="form-body">
+                        <div class="form">
+                            <ul>
+                                日付 <input name="date" value="<%= @report.date %>">
+
+                                組数 <input name="group" value="<%= @report.group %>">
+                                人数 <input name="people" value="<%= @report.people %>">
+
+                                目標売上 <input name="target" value="<%= @sale.target %>">
+                                実績売上 <input name="resalt" value="<%= @sale.resalt %>">
+                                
+
+                                
+
+                                
+                                実績現計 <input name="cash" value="<%= @sale.cash %>" >
+                                実績信計 <input name="credit" value="<%= @sale.credit %>">
+                                実績商品券 <input name="gift" value="<%= @sale.gift %>">
+                                
+
+                                当日クーポン <input name="coupon" value="<%= @sale.coupon %>">
+                                
+                                振り返り <textarea name="feed"><%= @report.feed %></textarea>
+
+
+                                ランチ<input name="lunch" value="<%= @sale.lunch %>" >
+                                テイクアウト <input name="takeout" value="<%= @sale.takeout %>">
+                                夜営業 <input name="night" value="<%= @sale.night %>">
+
+                                報告 <textarea name="report_txt"><%= @report.report_txt %></textarea>
+                                
+                                <input type="submit" value="登録">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <% end %>
+                    
+            </div>
+
+        </div>
+    </div>
+
+</div>

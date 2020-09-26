@@ -1,6 +1,6 @@
-class CreateExpences < ActiveRecord::Migration[6.0]
+class CreateExpenses < ActiveRecord::Migration[6.0]
   def change
-    create_table :expences do |t|
+    create_table :expenses do |t|
       t.text :name
       t.integer :cost
 

@@ -1,0 +1,35 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2020-09-25
+  group: 1
+  people: 1
+  target: 
+  resalt: 
+  cost: 
+  cash: 
+  credit: 
+  gift: 
+  lunch: 
+  night: 
+  takeout: 
+  coupon: 
+  feed: MyText
+  report: MyText
+
+two:
+  date: 2020-09-25
+  group: 1
+  people: 1
+  target: 
+  resalt: 
+  cost: 
+  cash: 
+  credit: 
+  gift: 
+  lunch: 
+  night: 
+  takeout: 
+  coupon: 
+  feed: MyText
+  report: MyText

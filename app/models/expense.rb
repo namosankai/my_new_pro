@@ -1,4 +1,4 @@
-class Expence < ApplicationRecord
+class Expense < ApplicationRecord
     validates :name, {presence: true}
     validates :cost, {presence: true}
 
