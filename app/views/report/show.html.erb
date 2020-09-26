@@ -1,0 +1,64 @@
+<div class="container">
+    <div class="section-title">
+        <h1><%= @report.date %>の営業報告</h1>
+    </div>
+    <div class="trader-kwsk-item">
+        <div class="post-time">
+            <%= @report.created_at %>
+        </div>
+        <div class="post-menu">
+            
+            
+        </div>
+        <div class="top-wrapper">
+        
+            <div class="report-content">
+                <h2>本日の営業報告</h2>
+                <div class="report-list">
+                    <ul>
+                        <li class="list-top">日付:<%= @report.date %></li>
+    
+                        <li>組数: <%= @report.group %>組</li>
+                        <li class="list-top">人数: <%= @report.people %>名様</li>
+    
+                        <li>目標売上: <%= @sale.target %>円</li>
+                        <li>実績売上: <%= @sale.resalt %>円</li>
+                        <li class="list-top">差額: <%= @difference %>円</li>
+    
+                        <li>累計目標: <%= @total_target %>円</li>
+                        <li>累計売上: <%= @total_resalt %>円</li>
+                        <li class="list-top">累計差額: <%= @total_dif %>円</li>
+    
+                        <li>実績総売上: <%= @sale.cash + @sale.credit + @sale.gift %>円</li>
+                        <li>実績現計: <%= @sale.cash %>円</li>
+                        <li>実績信計: <%= @sale.credit %>円</li>
+                        <li>実績商品券: <%= @sale.gift %>円</li>
+                        <li class="list-top">商品券未使用金:</li>
+    
+                        <li>ランチ単価: <input type="integer" name="unit_price_lunch"></li>
+                        <li class="list-top">夜営業単価: <input type="integer" name="unit_price_night"></li>
+    
+                        <li>当日原価率: <input type="integer" name="cost"></li>
+                        <li class="list-top">累計原価率: <input type="integer" name="total_cost"></li>
+    
+                        <li>当日クーポン: <%= @sale.coupon %>組</li>
+                        <li class="list-top">累計クーポン:</li>
+    
+                        <li class="list-top">振り返り: <%= @report.feed %></li>
+    
+    
+                        <li>ランチ: <%= @sale.lunch %>円</li>
+                        <li>テイクアウト: <%= @sale.takeout %>円</li>
+                        <li class="list-top">夜営業: <%= @sale.night %>円</li>
+    
+                        <li class="list-top">報告: <%= @report.report_txt %></li>
+                        
+                        <li>本日も一日ありがとうございます！</li>
+                    </ul>
+    
+                </div>
+    
+            </div>
+        </div>
+    </div>
+</div>

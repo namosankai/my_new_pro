@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get "report/new" => "report#new"
   post "report/create" => "report#create"
   get "report/index" => "report#index"
+  get "report/:id" => "report#show"
 
   get 'items/index' => "items#index"
   get "items/:id/new" => "items#new"

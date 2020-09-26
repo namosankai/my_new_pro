@@ -1,8 +1,10 @@
 class ReportController < ApplicationController
   def top
-    @report = Report.find_by(id:2)
-    @sale = Saling.find_by(today_id:2)
+    @report = Report.find_by(id:4)
+    @sale = Saling.find_by(today_id:4)
     
+    @total_target = Saling.all.sum(:target)
+    @total_resalt = Saling.all.sum(:resalt)
     
 
     difference = @sale.resalt - @sale.target
@@ -12,11 +14,18 @@ class ReportController < ApplicationController
       @difference = difference
     end
 
+    t_dif = @total_resalt - @total_target
+    if t_dif > 0
+      @total_dif = "+" + "#{t_dif}"
+    else
+      @total_dif = t_dif
+    end
+
   end
 
   def new
-    @report = Report.find_by(id: params[:id])
-    @sale = Saling.find_by(id: params[:id])
+    @report = Report.new
+    @sale = Saling.new
   end
 
   def create
@@ -45,5 +54,26 @@ class ReportController < ApplicationController
 
   def index
     @reports = Report.all.order(:desc)
+  end
+
+  def show
+    @report = Report.find_by(id: params[:id])
+    @sale = Saling.find_by(id: params[:id])
+    @total_target = Saling.all.sum(:target)
+    @total_resalt = Saling.all.sum(:resalt)
+
+    difference = @sale.resalt - @sale.target
+    if difference > 0
+      @difference = "+" + "#{difference}"
+    else
+      @difference = difference
+    end
+
+    t_dif = @total_resalt - @total_target
+    if t_dif > 0
+      @total_dif = "+" + "#{t_dif}"
+    else
+      @total_dif = t_dif
+    end
   end
 end

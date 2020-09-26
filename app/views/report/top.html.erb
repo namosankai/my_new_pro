@@ -19,11 +19,11 @@
                     <li>実績売上: <%= @sale.resalt %>円</li>
                     <li class="list-top">差額: <%= @difference %>円</li>
 
-                    <li>累計目標:</li>
-                    <li>累計売上:</li>
-                    <li class="list-top">累計差額:</li>
+                    <li>累計目標: <%= @total_target %>円</li>
+                    <li>累計売上: <%= @total_resalt %>円</li>
+                    <li class="list-top">累計差額: <%= @total_dif %>円</li>
 
-                    <li>実績総売上: <%= @sale.cash + @sale.credit + @sale.gift %></li>
+                    <li>実績総売上: <%= @sale.cash + @sale.credit + @sale.gift %>円</li>
                     <li>実績現計: <%= @sale.cash %>円</li>
                     <li>実績信計: <%= @sale.credit %>円</li>
                     <li>実績商品券: <%= @sale.gift %>円</li>
