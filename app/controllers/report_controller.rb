@@ -1,7 +1,7 @@
 class ReportController < ApplicationController
   def top
-    @report = Report.find_by(id:4)
-    @sale = Saling.find_by(today_id:4)
+    @report = Report.last
+    @sale = Saling.last
     
     @total_target = Saling.all.sum(:target)
     @total_resalt = Saling.all.sum(:resalt)

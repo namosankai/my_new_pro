@@ -9,6 +9,16 @@
                 <%= form_tag("/report/create") do %>
                 <div class="user-form">
                     <div class="form-body">
+                        <% @report.errors.full_messages.each do |message| %>
+                            <div class="error-form">
+                                <%= message %>
+                            </div>
+                        <% end %>
+                        <%= @sale.errors.full_messages.each do |masseage| %>
+                            <div class="error-form">
+                                <%= masseage %>
+                            </div>
+                        <% end %>
                         <div class="form">
                             <ul>
                                 日付 <input name="date" value="<%= @report.date %>">
