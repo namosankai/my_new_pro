@@ -38,16 +38,16 @@ header {
 .header-list {
    float: right;
    padding-top: 5px;
+   li {
+      float: left;
+      margin-right: 30px;
+      a {
+         color: white;
+         font-size: 15px;
+         padding-top: 10px;
+      }
+   }
 }
 
-.header-list li {
-   float: left;
-   margin-right: 30px;
-}
 
-.header-list li a {
-   color: white;
-   font-size: 15px;
-   padding-top: 10px;
-   
-}
+

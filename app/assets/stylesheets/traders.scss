@@ -8,9 +8,9 @@
 .content-item {
   float: left;
   border: 2px blueviolet;
+  li {
+    float: left;
+    padding-right: 20px;
+  }
 }
 
-.content-item li {
-  float: left;
-  padding-right: 20px;
-}
