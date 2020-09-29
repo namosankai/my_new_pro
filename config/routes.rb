@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   post "report/create" => "report#create"
   get "report/index" => "report#index"
   get "report/:id" => "report#show"
+  get "report/:id/edit" => "report#edit"
+  post "report/:id/update" => "report#update"
+  post "report/destroy" => "report#destroy"
 
   get 'items/index' => "items#index"
   get "items/:id/new" => "items#new"

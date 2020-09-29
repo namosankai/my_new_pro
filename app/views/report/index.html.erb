@@ -9,7 +9,13 @@
             </div>
             <% @reports.each do |report| %>
                 <div class="reports-index-item">
-                    <%= link_to(report.date, "/report/#{report.id}") %>
+                    <div class="post-menu">
+                        <%= link_to(report.date, "/report/#{report.id}") %>
+                    
+                        <%= link_to("編集","/report/#{report.id}/edit") %>
+                        
+                        
+                    </div>
                 </div>
             <% end %>
         

@@ -12,7 +12,7 @@ class TradersController < ApplicationController
 
   #新規投稿ボタン
   def create
-    @trader = Trader.new(content: params[:content])
+    @trader = Trader.new(content: params[:content],food: params[:food],drink: params[:drink],other: params[:other])
     if @trader.save
       flash[:notice] = "作成しました"
       redirect_to("/traders/show")
@@ -39,6 +39,9 @@ class TradersController < ApplicationController
   def update
     @trader = Trader.find_by(id: params[:id])
     @trader.content = params[:content]
+    @trader.food = params[:food]
+    @trader.drink = params[:drink]
+    @trader.other = params[:other]
     if @trader.save
       #保存できた場合
       flash[:notice] = "編集しました"
