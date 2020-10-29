@@ -9,12 +9,22 @@
                 <div class="form-heading">
                     <div class="users-form">
                         <div class="form-body">
-                            
+                            <% @trader.errors.full_messages.each do |message| %>
+                            <div class="form-error">
+                                <%= message %>
+                            </div>
+                            <% end %>
 
 
                            
                             <div class="form">
-                                <textarea name="content"></textarea>
+                                <textarea name="content"><%= @trader.content %></textarea>
+                                <p>食品選択y=1/n=0</p>
+                                <input name="food" value="<%= @trader.food %>">
+                                <p>飲物選択y=1/n=0</p>
+                                <input name="drink" value="<%= @trader.drink %>">
+                                <p>その他</p>
+                                <input name="other" value="<%= @trader.other %>">
                                 <input type="submit" value="追加">
                             </div>
                             

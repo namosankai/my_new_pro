@@ -60,7 +60,7 @@ class ReportController < ApplicationController
 
   #過去ログ一覧
   def index
-    @reports = Report.all.order(:desc)
+    @reports = Report.all
     @sale = Saling.find_by(id: params[:id])
   end
 

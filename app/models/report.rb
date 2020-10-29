@@ -5,4 +5,5 @@ class Report < ApplicationRecord
     validates :feed, {presence: true}
     validates :report_txt, {presence: true}
     
+    has_many :salings
 end

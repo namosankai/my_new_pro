@@ -7,7 +7,8 @@ class TradersController < ApplicationController
 
   #業者追加ページ
   def new
-    @trader = Trader.find_by(id: params[:id])
+    @trader = Trader.new
+    
   end
 
   #新規投稿ボタン

@@ -9,4 +9,5 @@ class Saling < ApplicationRecord
     validates :takeout, {presence: true}
     validates :coupon, {presence: true}
 
+    belongs_to :report, optional: true
 end
